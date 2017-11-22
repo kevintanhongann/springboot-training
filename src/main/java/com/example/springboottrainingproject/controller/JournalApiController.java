@@ -29,20 +29,20 @@ public class JournalApiController {
     return repo.findOne(id);
   }
 
-  @RequestMapping(method = RequestMethod.GET, value = "/journal/create")
-  public MyResponse create(){
-    Journal journal = new Journal();
-    journal.setCreated(Calendar.getInstance().getTime());
-    journal.setTitle("title 1");
-    journal.setSummary("summary 1");
-    repo.save(journal);
-
-    Journal journal2 = new Journal();
-    journal2.setTitle("title 2");
-    journal2.setSummary("");
-    journal2.setCreated(Calendar.getInstance().getTime());
-    repo.save(journal2);
-
-    return new MyResponse("success");
-  }
+//  @RequestMapping(method = RequestMethod.GET, value = "/journal/create")
+//  public MyResponse create(){
+//    Journal journal = new Journal();
+//    journal.setCreated(Calendar.getInstance().getTime());
+//    journal.setTitle("title 1");
+//    journal.setSummary("summary 1");
+//    repo.save(journal);
+//
+//    Journal journal2 = new Journal();
+//    journal2.setTitle("title 2");
+//    journal2.setSummary("");
+//    journal2.setCreated(Calendar.getInstance().getTime());
+//    repo.save(journal2);
+//
+//    return new MyResponse("success");
+//  }
 }
